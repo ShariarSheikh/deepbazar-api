@@ -1,1 +1,1 @@
-## api service for web builder integration
+## api server for https://deepbazar.vercel.app/
