@@ -19,6 +19,6 @@
   "rules": {
     "no-console": "error",
     "no-unused-vars": "error",
-    "@typescript-eslint/ban-ts-comment":"off"
+    "@typescript-eslint/ban-ts-comment": "off"
   }
 }

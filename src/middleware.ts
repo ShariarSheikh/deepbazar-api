@@ -7,26 +7,24 @@ import Logger from './core/Logger'
 
 // morgan logger--------------------------------------------------
 // morgan logger--------------------------------------------------
-const stream:StreamOptions = {
-    write: 
-    message => Logger.http(message)
+const stream: StreamOptions = {
+  write: (message) => Logger.http(message),
 }
 
-const skip =()=>{
-    return environment !== "development"
+const skip = () => {
+  return environment !== 'development'
 }
 
 const morganMiddleware = morgan(':method :url :status :res[content-length] - :response-time ms', {
-    stream,
-    skip,
-  })
-
+  stream,
+  skip,
+})
 
 //
 export default [
-    helmet(),
-    morganMiddleware,
-    cors({origin:corsUrls}),
-    express.json(),
-    express.urlencoded({extended:true})
+  helmet(),
+  morganMiddleware,
+  cors({ origin: corsUrls }),
+  express.json(),
+  express.urlencoded({ extended: true }),
 ]

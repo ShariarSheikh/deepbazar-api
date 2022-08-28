@@ -1,4 +1,4 @@
-export const  PORT = process.env.PORT 
+export const PORT = process.env.PORT
 
 export const environment = process.env.ENVIRONMENT as string
 
