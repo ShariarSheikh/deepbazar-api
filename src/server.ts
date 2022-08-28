@@ -1,8 +1,7 @@
 import app from './app'
+import { PORT } from './config'
+import Logger from './core/Logger'
 
-const port = process.env.PORT || 8000
-
-app.listen(port, () => {
-  // eslint-disable-next-line no-console
-  console.log(`Server listening on port ${port}`)
+app.listen(PORT || 8000, () => {
+  Logger.info(`Server listening on port ${PORT}`)
 })
